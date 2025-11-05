@@ -1,0 +1,121 @@
+/*body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
+
+/*'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1350&q=80'*/
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Roboto', sans-serif;
+  color: #232323;
+  background: 
+    /*linear-gradient(rgba(12, 12, 12, 0.85), rgba(195, 158, 122, 0.92)),*/
+    url('C:\Users\ADMIN\Documents\Projects\Book_finder\book-search-app\images\Gemini_Generated_Image_vy97e8vy97e8vy97.png') center/cover no-repeat;
+  /* The Unsplash image above is a generic book/library scene, ideal for a book finder app */
+  background-attachment:initial ;
+  transition: background 0.5s;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  color: #f4f8f8;
+  letter-spacing: 1px;
+}
+
+p, label, button, input, select, a {
+  font-size: 1.08rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 36px 18px 24px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(44,54,80,0.08);
+}
+
+input, select, button {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 4px 0;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  border-color: #427aae;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg,#427aae 60%, #6cb0e5 100%);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+button:disabled {
+  background: #aaaaaa;
+  cursor: default;
+}
+
+button:hover:enabled {
+  background: linear-gradient(90deg,#355c85 20%, #55b9d6 100%);
+}
+
+.card {
+  border-radius: 10px;
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 2px 12px rgba(20,40,80,0.11);
+  padding: 14px;
+  transition: transform 0.14s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.025);
+  box-shadow: 0 8px 28px rgba(35,70,130,0.17);
+}
+
+a {
+  color: #2874a6;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+a:hover {
+  color: #17447a;
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #f0f5f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #aacbe8;
+  border-radius: 7px;
+}
+
+code {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+  background: #f6f9fc;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.96rem;
+}
+

@@ -1,0 +1,245 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+/* src/App.css */
+
+/* Global reset and font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1920&auto=format&fit=crop'); /* Replace with local image later */
+  --overlay: linear-gradient(rgba(10, 14, 20, 0.75), rgba(10, 14, 20, 0.65));
+  --brand: #5b8def;
+  --brand-dark: #3a6bdc;
+  --text: #e7eef7;
+  --muted: #a8b3c7;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Page background with gradient overlay + image */
+body {
+  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background-image: var(--overlay), var(--bg-image);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-attachment: fixed, fixed;
+  background-blend-mode: overlay;
+  line-height: 1.5;
+}
+
+/* App container */
+.App {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* Header / Title with subtle glass effect */
+.app-header {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 0.4px;
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.search-input, .search-select, .search-button {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.search-input {
+  flex: 1 1 280px;
+  padding: 0 12px;
+}
+
+.search-select {
+  flex: 0 0 150px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.search-button {
+  padding: 0 18px;
+  background: var(--brand);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.05s ease;
+}
+
+.search-button:hover { background: var(--brand-dark); }
+.search-button:active { transform: translateY(1px); }
+
+/* Info / status text */
+.status {
+  margin: 14px 4px;
+  color: var(--muted);
+}
+
+/* Grid for results */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+/* Card styles */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: #1f2430;
+}
+
+.no-thumb {
+  width: 100%;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+}
+
+.card-body {
+  padding: 10px 12px 14px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-authors, .card-cats {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #dce7ff;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(220, 231, 255, 0.5);
+}
+.card-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* Pagination */
+.pager {
+  display: flex;
+  gap: 10px;
+  margin: 18px 2px 0;
+}
+
+.pager button {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.05s ease, background 0.15s ease;
+}
+
+.pager button:hover { background: rgba(255, 255, 255, 0.18); }
+.pager button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .thumb, .no-thumb {
+    height: 170px;
+  }
+}
