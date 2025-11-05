@@ -147,5 +147,4 @@ const gridStyles = {
   },
 };
 
-
 export default App;
