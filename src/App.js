@@ -1,62 +1,3 @@
-//import logo from './logo.svg';
-/*import BookSearchUI from './BookSearchUI';
-
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
-
-// src/App.js
-/*import React, { useState } from 'react';
-import BookSearchUI from './BookSearchUI'; // same folder => ./
-
-function App() {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  // This receives the combined query like "intitle:harry potter"
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-    // Later you’ll fetch from Google Books using this query
-    console.log('Search for:', query);
-  };
-
-  return (
-    <div style={{ padding: 16 }}>
-      <h1>Book Search App</h1>
-      <BookSearchUI onSearch={handleSearch} />
-
-      { //Temporary feedback so you see it’s wired correctly }
-      {searchQuery && (
-        <p>Preparing request with: <strong>{searchQuery}</strong></p>
-      )}
-    </div>
-  );
-}
-
-export default App;;*/
-
-
 // src/App.js
 import React, { useState, useEffect } from 'react';
 import BookSearchUI from './BookSearchUI';
@@ -205,5 +146,6 @@ const gridStyles = {
     color: '#777',
   },
 };
+
 
 export default App;
